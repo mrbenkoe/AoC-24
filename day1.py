@@ -1,5 +1,4 @@
 from pathlib import Path
-import os
 import numpy as np
 
 file = "day1.txt"
