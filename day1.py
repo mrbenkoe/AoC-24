@@ -12,8 +12,6 @@ with open(path, "r") as f:
 
 data = np.array(data, dtype=int)
 
-#print(data)
-
 col1 = np.sort(data[:, 0])
 col2 = np.sort(data[:, 1])
 
