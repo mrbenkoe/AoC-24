@@ -26,4 +26,14 @@ for i in range(3,len(df[0])-3):
                     if df[i+row[0],j+col[0]] == "M" and df[i+row[1],j+col[1]] == 'A' and df[i+row[2],j+col[2]] == 'S':
                         result += 1
 
-print(result)
+print(result) #2336
+
+result = 0 
+for i in range(3,len(df[0])-3):
+    for j in range(3,len(df[1])-3):
+        if df[i,j] == "A":
+            if (df[i-1,j-1] == 'M' and df[i+1,j+1] == 'S') or (df[i-1,j-1] == 'S' and df[i+1,j+1] == 'M'):
+                if (df[i-1,j+1] == 'M' and df[i+1,j-1] == 'S') or (df[i-1,j+1] == 'S' and df[i+1,j-1] == 'M'):       
+                    result += 1
+
+print(result) #1831
